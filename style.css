@@ -343,56 +343,9 @@ video {
 
 
 
-@media (max-width: 1024px) {
-    header {
-        flex-direction: row;
-        padding: 10px 15px;
-    }
 
-    .products {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
-    .product img {
-
-        object-fit: cover;
-
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-        gap: 10px;
-    }
-
-    .hero {
-        padding: 50px 20px;
-    }
-
-    .section {
-        padding: 30px;
-    }
-
-    .products {
-        gap: 20px;
-    }
-
-    .product img {
-
-        object-fit: cover;
-
-    }
-}
-
-
-@media (max-width: 480px) {
+/* Large devices: 1000px to 1200px */
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
     header h1 {
         font-size: 1.5rem;
     }
@@ -402,58 +355,48 @@ video {
     }
 
     .hero {
-        padding: 30px 10px;
-    }
-
-    .section {
-        padding: 20px;
+        padding: 80px 20px;
     }
 
     .products {
-        gap: 10px;
-    }
-
-    .product h3 {
-        font-size: 1rem;
+        gap: 20px;
     }
 
     .product img {
-
-        object-fit: cover;
-
-    }
-
-    .product p {
-        font-size: 0.9rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 14px;
-    }
-
-    .contact-form button {
-        font-size: 14px;
+        max-height: 200px;
     }
 }
 
-
-@media (max-width: 1024px) {
-    header {
-        flex-direction: row;
-        padding: 10px 15px;
+/* Medium devices: 700px to 1000px */
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    header h1 {
+        font-size: 1.3rem;
     }
 
     nav ul {
-        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero {
+        padding: 60px 20px;
     }
 
     .products {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .product img {
+        max-height: 180px;
     }
 }
 
-@media (max-width: 768px) {
+/* Small devices: 1px to 700px */
+@media screen and (min-width: 1px) and (max-width: 700px) {
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -461,39 +404,16 @@ video {
 
     nav ul {
         flex-direction: column;
-        margin-top: 10px;
-        gap: 10px;
-    }
-
-    .hero {
-        padding: 50px 20px;
-    }
-
-    .section {
-        padding: 30px;
-    }
-
-    .products {
-        gap: 20px;
-    }
-
-    .product h3 {
-        font-size: 1rem;
-    }
-}
-
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
+        align-items: flex-start;
     }
 
     nav ul li {
-        margin: 0 5px;
+        margin: 10px 0;
     }
 
     .hero {
-        padding: 30px 10px;
+        padding: 40px 10px;
+        font-size: 0.9rem;
     }
 
     .section {
@@ -501,25 +421,15 @@ video {
     }
 
     .products {
+        grid-template-columns: 1fr;
         gap: 10px;
     }
 
-    .product h3 {
-        font-size: 0.9rem;
+    .product img {
+        max-height: 150px;
     }
 
-    .product p {
-        font-size: 0.8rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .contact-form button {
-        font-size: 14px;
-        padding: 10px;
+    footer iframe {
+        height: 200px;
     }
 }
