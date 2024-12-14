@@ -1,0 +1,525 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #000000, #2c3e8f, #8e44ad);
+    color: white;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 35px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #dcdcdc;
+}
+
+.hero {
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.section {
+    padding: 40px;
+    margin-top: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    animation: fadeIn 2s;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    color: #fff;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.product {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 400px;
+    height: 500px;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.product h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.product p {
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.icons {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+}
+
+
+
+
+video {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+}
+
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+#your-order {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    margin-top: 80px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s;
+}
+
+.order-info {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.order-info p {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.order-info .status {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.order-summary {
+    margin-top: 20px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.order-item img {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-details {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.item-details h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.item-details p {
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+.price {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.order-total {
+    margin-top: 20px;
+    text-align: right;
+    color: #fff;
+}
+
+.order-total p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+
+
+#contact {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    margin: 105px;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 18px;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.568);
+    color: #fff;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ffcc00;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact-form button {
+    padding: 14px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #2c3e8f, #8e44ad);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #8e44ad, #2c3e8f);
+}
+
+
+.contact-info {
+    margin-top: 30px;
+    color: #ddd;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: white;
+}
+
+
+
+@media (max-width: 1024px) {
+    header {
+        flex-direction: row;
+        padding: 10px 15px;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .product img {
+
+        object-fit: cover;
+
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .section {
+        padding: 30px;
+    }
+
+    .products {
+        gap: 20px;
+    }
+
+    .product img {
+
+        object-fit: cover;
+
+    }
+}
+
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .products {
+        gap: 10px;
+    }
+
+    .product h3 {
+        font-size: 1rem;
+    }
+
+    .product img {
+
+        object-fit: cover;
+
+    }
+
+    .product p {
+        font-size: 0.9rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    header {
+        flex-direction: row;
+        padding: 10px 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .section {
+        padding: 30px;
+    }
+
+    .products {
+        gap: 20px;
+    }
+
+    .product h3 {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .products {
+        gap: 10px;
+    }
+
+    .product h3 {
+        font-size: 0.9rem;
+    }
+
+    .product p {
+        font-size: 0.8rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
