@@ -4,183 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login/Register-Printed Apparel Store</title>
+    <meta name="description" content="Login or register with Printed SB Store.">
+    <title>Login/Register - Printed SB Store</title>
     <link rel="icon" href="images/shopping-bag.png">
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #000000, #2c3e8f, #8e44ad);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #fff;
-            overflow: hidden;
-        }
-
-        .container {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(15px);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 420px;
-            transition: transform 0.3s ease-in-out, opacity 0.4s ease-in-out;
-            opacity: 0;
-            transform: scale(0.95);
-        }
-
-        .container.show {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #fff;
-            font-weight: 600;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            margin-bottom: 5px;
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        input {
-            margin-bottom: 18px;
-            padding: 14px;
-            font-size: 16px;
-            border: none;
-            border-radius: 30px;
-            outline: none;
-            background: rgba(255, 255, 255, 0.568);
-            color: #fff;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-
-        input:focus {
-            background: rgba(241, 241, 241, 0.862);
-            transform: scale(1.05);
-        }
-
-        button {
-            padding: 14px;
-            font-size: 16px;
-            background: linear-gradient(135deg, #2c3e8f, #8e44ad);
-            color: white;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-
-        button:hover {
-            transform: translateY(-3px);
-            background: linear-gradient(135deg, #8e44ad, #2c3e8f);
-        }
-
-        .switch {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .switch a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .switch a:hover {
-            color: #dcdcdc;
-        }
-    </style>
+    <script src="script.js" defer></script>
 </head>
 
-<body>
-    <header>
-        <h1>Printed SB Store</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#tshirts">T-Shirts</a></li>
-                <li><a href="#hoodies">Hoodies</a></li>
-                <li><a href="order.html">Your Order</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html">Login/Register</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <h1>Login</h1>
-        <form>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-            <button type="submit">Login</button>
-        </form>
-        <div class="switch">
-            <p>Don't have an account? <a href="#" onclick="switchToRegister()">Register here</a></p>
+<body class="auth-page">
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Printed SB Store home">
+            <img src="images/shopping-bag.png" alt="" width="34" height="34">
+            <span>Printed SB Store</span>
+        </a>
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-controls="site-drawer" aria-expanded="false" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="site-drawer" id="site-drawer" data-site-drawer>
+            <div class="drawer-head">
+                <span>Menu</span>
+                <button class="icon-button drawer-close" type="button" data-menu-close aria-label="Close menu">Close</button>
+            </div>
+            <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#shop">Shop</a></li>
+                    <li><a href="index.html#lookbook">Lookbook</a></li>
+                    <li><a href="order.html">Orders</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions" aria-label="Store actions">
+                <a class="action-link" href="index.html#shop">Wishlist <span class="badge-count" data-wishlist-count>0</span></a>
+                <a class="action-link" href="order.html">Cart <span class="badge-count" data-cart-count>0</span></a>
+                <a class="action-link" href="login.html" aria-current="page">Login</a>
+            </div>
         </div>
-    </div>
+    </header>
+    <main>
+        <section class="page-shell auth-wrap">
+            <div class="auth-copy">
+                <p class="eyebrow">Member access</p>
+                <h1>Keep your orders and favorites in one place.</h1>
+                <p>Sign in to keep checkout details, saved prints, and order updates ready for your next visit.</p>
+            </div>
+            <div class="auth-card" data-auth-card>
+                <h2 data-auth-title>Login</h2>
+                <form data-auth-form></form>
+                <p class="auth-message" data-auth-message></p>
+                <div class="switch" data-auth-switch></div>
+            </div>
+        </section>
+    </main>
 
-    <script>
-        function switchToRegister() {
-            document.querySelector('h1').textContent = 'Register';
-            document.querySelector('form').innerHTML = `
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
-
-                <button type="submit">Register</button>
-            `;
-            document.querySelector('.switch').innerHTML = `<p>Already have an account? <a href="#" onclick="switchToLogin()">Login here</a></p>`;
-            document.querySelector('.container').classList.add('show');
-        }
-
-        function switchToLogin() {
-            document.querySelector('h1').textContent = 'Login';
-            document.querySelector('form').innerHTML = `
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-                <button type="submit">Login</button>
-            `;
-            document.querySelector('.switch').innerHTML = `<p>Don't have an account? <a href="#" onclick="switchToRegister()">Register here</a></p>`;
-            document.querySelector('.container').classList.add('show');
-        }
-
-        // Show container after page loads with animation
-        window.onload = () => {
-            document.querySelector('.container').classList.add('show');
-        };
-    </script>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <strong>Printed SB Store</strong>
+                <p>Contact us at <a href="mailto:subhramoy@gmail.com">subhramoy@gmail.com</a></p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#shop">Shop</a>
+                <a href="contact.html">Support</a>
+                <a href="order.html">Orders</a>
+            </div>
+        </div>
+        <p>&copy; 2026 SB Store. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

@@ -4,78 +4,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop printed t-shirts and hoodies from Printed SB Store.">
     <title>Printed SB Store</title>
     <link rel="icon" href="images/shopping-bag.png">
+    <link rel="preload" href="images/hero.jpg" as="image">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Printed SB Store</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#tshirts">T-Shirts</a></li>
-                <li><a href="#hoodies">Hoodies</a></li>
-                <li><a href="order.html">Your Order</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html">Login/Register</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Printed SB Store home">
+            <img src="images/shopping-bag.png" alt="" width="34" height="34">
+            <span>Printed SB Store</span>
+        </a>
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-controls="site-drawer" aria-expanded="false" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="site-drawer" id="site-drawer" data-site-drawer>
+            <div class="drawer-head">
+                <span>Menu</span>
+                <button class="icon-button drawer-close" type="button" data-menu-close aria-label="Close menu">Close</button>
+            </div>
+            <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="index.html#shop">Shop</a></li>
+                    <li><a href="index.html#lookbook">Lookbook</a></li>
+                    <li><a href="order.html">Orders</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions" aria-label="Store actions">
+                <a class="action-link" href="index.html#shop">Wishlist <span class="badge-count" data-wishlist-count>0</span></a>
+                <a class="action-link" href="order.html">Cart <span class="badge-count" data-cart-count>0</span></a>
+                <a class="action-link" href="login.html">Login</a>
+            </div>
+        </div>
     </header>
 
     <section class="hero">
-        <h1>Welcome to Our Store!</h1>
-        <p>Discover unique printed t-shirts and hoodies to match your style.</p>
-        <video controls>
-            <source src="images/AI.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
-
-    <section id="tshirts" class="section">
-        <h2>Printed T-Shirts</h2>
-        <div class="products">
-            <div class="product">
-                <img src="https://veirdo.in/cdn/shop/files/Artboard11.png?v=1724147308" alt="T-Shirt 1">
-                <h3>Graphic Tee</h3>
-                <p> <B>Price</B>- 200.00Rs</p>
-                <div class="icons"> &#128722; <a href="#">Buy</a></div>
+        <div class="hero-content">
+            <p class="eyebrow">Printed apparel for daily wear</p>
+            <h1>Graphic tees and hoodies that do the talking.</h1>
+            <p>Shop statement prints, clean fits, and comfortable layers built for college, streetwear, and weekend plans.</p>
+            <div class="hero-actions">
+                <a class="button" href="#shop">Shop Now</a>
+                <a class="button-secondary" href="#lookbook">Watch Lookbook</a>
             </div>
-            <div class="product">
-                <img src="https://factorie.com.au/on/demandware.static/-/Sites-catalog-master-factorie/default/dw1aad48ec/5299179/5299179-01-2.jpg"
-                    alt="T-Shirt 2">
-                <h3>Classic Tee</h3>
-                <p><B>Price</B>- 180.00Rs</p>
-                <div class="icons"> &#128722; <a href="#">Buy</a> </div>
+            <div class="hero-stats" aria-label="Store highlights">
+                <span>4 curated drops</span>
+                <span>From Rs 180</span>
+                <span>Fast local dispatch</span>
             </div>
         </div>
     </section>
 
-    <section id="hoodies" class="section">
-        <h2>Printed Hoodies</h2>
-        <div class="products">
-            <div class="product">
-                <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/20691452/2024/12/2/a463e437-d7c1-4d87-86a8-6ef7174aa2311733150425404-VEIRDO-Men-Black-Printed-Hooded-Sweatshirt-5331733150425078-1.jpg"
-                    alt="Hoodie 1">
-                <h3>Cozy Hoodie</h3>
-                <p><B>Price</B>- 350.00Rs</p>
-                <div class="icons"> &#128722; <a href="#">Buy</a> </div>
-            </div>
-            <div class="product">
-                <img src="https://styleunion.in/cdn/shop/products/LWSS00067DUSKYROUGE_3.jpg?v=1699458859&width=1200"
-                    alt="Hoodie 2">
-                <h3>Bold Hoodie</h3>
-                <p> <B>price</B>- 400.00</p>
-                <div class="icons"> &#128722; <a href="#">Buy</a></div>
+    <section id="shop" class="section">
+        <div class="section-header">
+            <div>
+                <p class="eyebrow">Shop the drop</p>
+                <h2>Fresh printed essentials</h2>
+                <p>Filter by category, search by style, and add favorites before checkout.</p>
             </div>
         </div>
 
+        <div class="shop-panel">
+            <div class="shop-controls">
+                <label class="search-field" for="product-search">
+                    <input type="search" id="product-search" data-product-search placeholder="Search tees, hoodies, colors">
+                </label>
+                <div class="filter-chips" aria-label="Product categories">
+                    <button class="chip is-active" type="button" data-filter="all">All</button>
+                    <button class="chip" type="button" data-filter="tshirts">T-Shirts</button>
+                    <button class="chip" type="button" data-filter="hoodies">Hoodies</button>
+                </div>
+                <label class="sort-field" for="product-sort">
+                    <select id="product-sort" data-product-sort>
+                        <option value="featured">Featured</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="products" data-product-grid>
+                <article class="product-card" data-product-card data-order="1" data-category="tshirts" data-name="Graphic Tee" data-price="200">
+                    <div class="product-media">
+                        <span class="product-badge">Best Seller</span>
+                        <button class="wishlist-button" type="button" data-wishlist aria-label="Save Graphic Tee">&hearts;</button>
+                        <img src="https://veirdo.in/cdn/shop/files/Artboard11.png?v=1724147308" alt="Graphic printed t-shirt" loading="lazy" decoding="async">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta">
+                            <span>T-Shirt</span>
+                            <span class="rating">4.8/5</span>
+                        </div>
+                        <h3>Graphic Tee</h3>
+                        <p>Bold street print on a soft everyday cotton fit.</p>
+                        <div class="size-row" aria-label="Available sizes">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span>
+                        </div>
+                        <div class="product-footer">
+                            <strong class="price">Rs 200</strong>
+                            <button class="product-action" type="button" data-add-cart>Add</button>
+                            <a class="buy-now" href="order.html">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product-card data-order="2" data-category="tshirts" data-name="Classic Tee" data-price="180">
+                    <div class="product-media">
+                        <span class="product-badge">Value Pick</span>
+                        <button class="wishlist-button" type="button" data-wishlist aria-label="Save Classic Tee">&hearts;</button>
+                        <img src="https://factorie.com.au/on/demandware.static/-/Sites-catalog-master-factorie/default/dw1aad48ec/5299179/5299179-01-2.jpg"
+                            alt="Classic printed t-shirt" loading="lazy" decoding="async">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta">
+                            <span>T-Shirt</span>
+                            <span class="rating">4.6/5</span>
+                        </div>
+                        <h3>Classic Tee</h3>
+                        <p>Easy graphic tee with a clean shape and relaxed feel.</p>
+                        <div class="size-row" aria-label="Available sizes">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span>
+                        </div>
+                        <div class="product-footer">
+                            <strong class="price">Rs 180</strong>
+                            <button class="product-action" type="button" data-add-cart>Add</button>
+                            <a class="buy-now" href="order.html">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product-card data-order="3" data-category="hoodies" data-name="Cozy Hoodie" data-price="350">
+                    <div class="product-media">
+                        <span class="product-badge">Warm Layer</span>
+                        <button class="wishlist-button" type="button" data-wishlist aria-label="Save Cozy Hoodie">&hearts;</button>
+                        <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/20691452/2024/12/2/a463e437-d7c1-4d87-86a8-6ef7174aa2311733150425404-VEIRDO-Men-Black-Printed-Hooded-Sweatshirt-5331733150425078-1.jpg"
+                            alt="Black printed hoodie" loading="lazy" decoding="async">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta">
+                            <span>Hoodie</span>
+                            <span class="rating">4.9/5</span>
+                        </div>
+                        <h3>Cozy Hoodie</h3>
+                        <p>Black printed hoodie with a structured winter-ready hood.</p>
+                        <div class="size-row" aria-label="Available sizes">
+                            <span>M</span><span>L</span><span>XL</span>
+                        </div>
+                        <div class="product-footer">
+                            <strong class="price">Rs 350</strong>
+                            <button class="product-action" type="button" data-add-cart>Add</button>
+                            <a class="buy-now" href="order.html">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product-card data-order="4" data-category="hoodies" data-name="Bold Hoodie" data-price="400">
+                    <div class="product-media">
+                        <span class="product-badge">New</span>
+                        <button class="wishlist-button" type="button" data-wishlist aria-label="Save Bold Hoodie">&hearts;</button>
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=80"
+                            alt="Person wearing a printed hoodie" loading="lazy" decoding="async">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta">
+                            <span>Hoodie</span>
+                            <span class="rating">4.7/5</span>
+                        </div>
+                        <h3>Bold Hoodie</h3>
+                        <p>Color-rich hoodie for standout casual outfits.</p>
+                        <div class="size-row" aria-label="Available sizes">
+                            <span>M</span><span>L</span><span>XL</span>
+                        </div>
+                        <div class="product-footer">
+                            <strong class="price">Rs 400</strong>
+                            <button class="product-action" type="button" data-add-cart>Add</button>
+                            <a class="buy-now" href="order.html">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <p class="empty-state" data-empty-state>No products match that search.</p>
+        </div>
     </section>
 
-    <footer>
-        <p>Contact us at <a href="mailto:subhramoy@gmail.com">subhramoy@gmail.com</a></p>
-        <p>&copy; 2024 SB Store. All rights reserved.</p>
+    <section id="lookbook" class="lookbook">
+        <div class="section lookbook-panel">
+            <div>
+                <p class="eyebrow">Lookbook</p>
+                <h2>See the fit before you pick the print.</h2>
+                <p>A closer look at texture, shape, and print scale before you choose your next fit.</p>
+                <ul>
+                    <li>Soft cotton and fleece blends</li>
+                    <li>Statement graphics with clean silhouettes</li>
+                    <li>Easy styling for everyday outfits</li>
+                </ul>
+            </div>
+            <video controls preload="metadata" poster="images/hero.jpg" playsinline>
+                <source src="images/AI.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <strong>Printed SB Store</strong>
+                <p>Contact us at <a href="mailto:subhramoy@gmail.com">subhramoy@gmail.com</a></p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#shop">Shop</a>
+                <a href="contact.html">Support</a>
+                <a href="order.html">Orders</a>
+            </div>
+        </div>
+        <p>&copy; 2026 SB Store. All rights reserved.</p>
     </footer>
 </body>
 

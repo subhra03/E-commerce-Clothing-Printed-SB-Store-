@@ -4,48 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Printed SB Store for help with printed t-shirts and hoodies.">
     <title>Contact Us - Printed SB Store</title>
     <link rel="icon" href="images/shopping-bag.png">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Printed SB Store</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#tshirts">T-Shirts</a></li>
-                <li><a href="#hoodies">Hoodies</a></li>
-                <li><a href="order.html">Your Order</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html">Login/Register</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Printed SB Store home">
+            <img src="images/shopping-bag.png" alt="" width="34" height="34">
+            <span>Printed SB Store</span>
+        </a>
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-controls="site-drawer" aria-expanded="false" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="site-drawer" id="site-drawer" data-site-drawer>
+            <div class="drawer-head">
+                <span>Menu</span>
+                <button class="icon-button drawer-close" type="button" data-menu-close aria-label="Close menu">Close</button>
+            </div>
+            <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#shop">Shop</a></li>
+                    <li><a href="index.html#lookbook">Lookbook</a></li>
+                    <li><a href="order.html">Orders</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions" aria-label="Store actions">
+                <a class="action-link" href="index.html#shop">Wishlist <span class="badge-count" data-wishlist-count>0</span></a>
+                <a class="action-link" href="order.html">Cart <span class="badge-count" data-cart-count>0</span></a>
+                <a class="action-link" href="login.html">Login</a>
+            </div>
+        </div>
     </header>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form class="contact-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <main>
+        <section class="page-hero">
+            <div class="page-title">
+                <p class="eyebrow">Support</p>
+                <h1>Contact us</h1>
+                <p>Questions about sizes, orders, custom prints, or delivery? Send a note and we will reply soon.</p>
+            </div>
+        </section>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <section id="contact" class="page-shell contact-grid">
+            <div class="form-card">
+                <form class="contact-form" data-contact-form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-            <button type="submit">Send Message</button>
-        </form>
-        <div class="contact-info">
-            <p>For further inquiries, email us at <a href="mailto:subhramoy@gmail.com">subhramoy@gmail.com</a>.</p>
-            <p>Or call us at <a href="tel:+917002454403">+91 (700) 245-4403</a>.</p>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+                    <button class="button" type="submit">Send Message</button>
+                </form>
+                <p class="form-message" data-contact-message>Your message is ready. We will get back to you soon.</p>
+            </div>
+
+            <div class="contact-info">
+                <article>
+                    <h2>Email</h2>
+                    <p><a href="mailto:subhramoy@gmail.com">subhramoy@gmail.com</a></p>
+                </article>
+                <article>
+                    <h2>Phone</h2>
+                    <p><a href="tel:+917002454403">+91 (700) 245-4403</a></p>
+                </article>
+                <article>
+                    <h2>Help with orders</h2>
+                    <p>Keep your order ID ready so support can help faster.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <strong>Printed SB Store</strong>
+                <p>Contact us at <a href="mailto:subhramoy@gmail.com">subhramoy@gmail.com</a></p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#shop">Shop</a>
+                <a href="contact.html">Support</a>
+                <a href="order.html">Orders</a>
+            </div>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 SB Store. All rights reserved.</p>
+        <p>&copy; 2026 SB Store. All rights reserved.</p>
     </footer>
 
 </body>
